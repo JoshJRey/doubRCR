@@ -143,9 +143,9 @@ for i in range(len(ref_counts)):
 ### Compare overall number of doubletons to expected number, to give prediction of proportion that are non-recurrent,
 ### and then the probability that a given one is non-recurrent   
 
-doubletons = ((ac_f[:,0]==(ngenomes-2)) & (ac_f[:,1]==2) & (ac_f[:,2]==0) & (allele_counts[:,3]==0))
+doubletons = ((ac_f[:,0]==(ngenomes-2)) & (ac_f[:,1]==2) & (ac_f[:,2]==0) & (ac_f[:,3]==0))
 
-final_prop = sum(doub_preds.iloc[:,3])/np.count_nonzero((ac_f[:,0]==(ngenomes-2)) & (ac_f[:,1]==2) & (ac_f[:,2]==0) & (allele_counts[:,3]==0))
+final_prop = sum(doub_preds.iloc[:,3])/np.count_nonzero((ac_f[:,0]==(ngenomes-2)) & (ac_f[:,1]==2) & (ac_f[:,2]==0) & (ac_f[:,3]==0))
 final_prob = final_prop #/2
 print(sum(doub_preds.iloc[:,3]))
 print(final_prob*100)
